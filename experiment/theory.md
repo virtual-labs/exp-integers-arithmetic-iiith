@@ -1,1 +1,1 @@
-### Link your theory in here
+Please read the [Lecture Notes at this link](doc/integerRepresentation.pdf) for the necessary background theory to work on this experiment.	
