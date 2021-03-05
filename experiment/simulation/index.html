@@ -1,13 +1,221 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<!-- Add CSS at the head of HTML file -->
-    <link rel="stylesheet" href="./css/main.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Representation of Integers and their Arithmetic</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/co1.css">
 </head>
-<body>
-		<!-- Your code goes here-->
+<body onload="active_switch('four-switch')">
+    <div class="container">
+        <div class = " mx-4 my-3 my-sm-3 d-flex flex-row">
+            <div class="row-10 m-auto px-2">
+                <div class = "text-center">
+                    <h1 id = "main-heading">Integer Arithmetic</h1>
+                </div>
+            </div>
+<!--            <button class = " btn btn-danger help row-2  m-auto px-4 rounded">Help </button>-->
+        </div>
 
-	<!-- Add JS at the bottom of HTML file --> 
-        <script src="./js/main.js"></script>
+        <div class= "row">
+            <div class = "col-md-5">
+                <div class="col">
+                <div class ="operations m-auto pt-5">
+                    <button onclick="addfunc()" class="btn btn-warning m-3 py-2">Add</button>
+                    <button onclick="reset()" class="btn btn-warning m-3 py-2">RESET</button>
+                    <button class = "bitswitch btn btn-warning m-3 py-2" id ="five-switch"><a href="html/CO1_5-bit.html">5-bit Table</a></button>     
+                </div>
+                <div class ="results row-xs-12 row-sm-12 row-6 m-auto p-2">
+                    <h3 class = "mt-5 mb-4" id = "main-heading">Results</h3>
+                    <div class="4-bit-result-table">
+                        <table class="rtable table-bordered">
+                                <tbody>
+                                    <tr id="rowbinar">
+                                        <th>1</th>
+                                        <td>Binary rep</td>
+                                        <td class ="ans" id ="binar"></td>
+                                        
+                                    </tr>
+                                    <tr id = "row2s">
+                                        <th>2</th>
+                                        <td>2's comp</td>
+                                        <td class="ans" id = "2s"></td>
+                                    </tr>
+                                    <tr id = "row1s">
+                                        <th>3</th>
+                                        <td>1's comp</td>
+                                        <td class="ans" id = "1s"></td>
+                                    </tr>
+                                    <tr id="rowunsigned">
+                                        <th>4</th>
+                                        <td>Unsigned</td>
+                                        <td id = "unsigned"></td>
+                                    </tr>
+                                    <tr id="rowsigned">
+                                        <th>5</th>
+                                        <td>Signed</td>
+                                        <td id = "signed" ></td>
+                                    </tr>
+                                </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="col-md-7">
+            <div class ="bit-table m-auto p-5">
+                    <table class="table table-bordered mb-0" id = "four-bit-table" >
+                    <thead>
+                        <tr>
+                            <th scope="col">Sno.</th>
+                            <th scope="col">Binary</th>
+                            <th scope="col">2's COMP</th>
+                            <th scope="col">1's COMP</th>
+                            <th scope="col">UNSIGNED</th>
+                            <th scope="col">SIGNED</th>
+                        </tr>
+                    </thead>
+    
+                    <tbody>
+                        <tr id = "1" onclick="myfunction('1')" onmouseover="mouseOver('1')" onmouseout="mouseOut('1')">
+                            <td>1</td>
+                            <td id="101">0000</td>
+                            <td id="102">0</td>
+                            <td id="103">0</td>
+                            <td id="104">0</td>
+                            <td id="105">0</td>
+                        </tr>
+                        <tr id = "2" onclick="myfunction('2')" onmouseover="mouseOver('2')" onmouseout="mouseOut('2')">
+                            <td>2</td>
+                            <td id="201">0001</td>
+                            <td id="202">1</td>
+                            <td id="203">1</td>
+                            <td id="204">1</td>
+                            <td id="205">1</td>
+                        </tr>
+                        <tr id="3" onclick="myfunction('3')" onmouseover="mouseOver('3')" onmouseout="mouseOut('3')">
+                            <td>3</td>
+                            <td id="301">0010</td>
+                            <td id="302">2</td>
+                            <td id="303">2</td>
+                            <td id="304">2</td>
+                            <td id="305">2</td>
+                        </tr>
+                        <tr id="4" onclick="myfunction('4')" onmouseover="mouseOver('4')" onmouseout="mouseOut('4')">
+                            <td>4</td>
+                            <td id="401">0011</td>
+                            <td id="402">3</td>
+                            <td id="403">3</td>
+                            <td id="404">3</td>
+                            <td id="405">3</td>
+                        </tr>
+                        <tr id="5" onclick="myfunction('5')" onmouseover="mouseOver('5')" onmouseout="mouseOut('5')">
+                            <td>5</td>
+                            <td id="501">0100</td>
+                            <td id="502">4</td>
+                            <td id="503">4</td>
+                            <td id="504">4</td>
+                            <td id="505">4</td>
+                        </tr>
+                        <tr id="6" onclick="myfunction('6')" onmouseover="mouseOver('6')" onmouseout="mouseOut('6')">
+                            <td>6</td>
+                            <td id="601">0101</td>
+                            <td id="602">5</td>
+                            <td id="603">5</td>
+                            <td id="604">5</td>
+                            <td id="605">5</td>
+                        </tr>
+                        <tr id="7" onclick="myfunction('7')" onmouseover="mouseOver('7')" onmouseout="mouseOut('7')">
+                            <td>7</td>
+                            <td id="701">0110</td>
+                            <td id="702">6</td>
+                            <td id="703">6</td>
+                            <td id="704">6</td>
+                            <td id="705">6</td>
+                        </tr>
+                        <tr id="8" onclick="myfunction('8')" onmouseover="mouseOver('8')" onmouseout="mouseOut('8')">
+                            <td>8</td>
+                            <td id="801">0111</td>
+                            <td id="802">7</td>
+                            <td id="803">7</td>
+                            <td id="804">7</td>
+                            <td id="805">7</td>
+                        </tr>
+                        <tr id="9" onclick="myfunction('9')" onmouseover="mouseOver('9')" onmouseout="mouseOut('9')">
+                            <td>9</td>
+                            <td id="901">1000</td>
+                            <td id="902">-8</td>
+                            <td id="903">-7</td>
+                            <td id="904">8</td>
+                            <td id="805">-0</td>
+                        </tr>
+                        <tr id="10" onclick="myfunction('10')" onmouseover="mouseOver('10')" onmouseout="mouseOut('10')">
+                            <td>10</td>
+                            <td id="1001">1001</td>
+                            <td id="1002">-7</td>
+                            <td id="1003">-6</td>
+                            <td id="1004">9</td>
+                            <td id="1005">-1</td>
+                        </tr>
+                        <tr id="11" onclick="myfunction('11')" onmouseover="mouseOver('11')" onmouseout="mouseOut('11')">
+                            <td>11</td>
+                            <td id="1101">1010</td>
+                            <td id="1102">-6</td>
+                            <td id="1103">-5</td>
+                            <td id="1104">10</td>
+                            <td id="1105">-2</td>
+                        </tr>
+                        <tr id="12" onclick="myfunction('12')" onmouseover="mouseOver('12')" onmouseout="mouseOut('12')">
+                            <td>12</td>
+                            <td id="1201">1011</td>
+                            <td id="1202">-5</td>
+                            <td id="1203">-4</td>
+                            <td id="1204">11</td>
+                            <td id="1205">-3</td>
+                        </tr>
+                        <tr id="13" onclick="myfunction('13')" onmouseover="mouseOver('13')" onmouseout="mouseOut('13')">
+                            <td>13</td>
+                            <td id="1301">1100</td>
+                            <td id="1302">-5</td>
+                            <td id="1303">-3</td>
+                            <td id="1304">12</td>
+                            <td id="1305">-4</td>
+                        </tr>
+                        <tr id="14" onclick="myfunction('14')" onmouseover="mouseOver('14')" onmouseout="mouseOut('14')">
+                            <td>14</td>
+                            <td id="1401">1101</td>
+                            <td id="1402">-6</td>
+                            <td id="1403">-2</td>
+                            <td id="1404">13</td>
+                            <td id="1405">-5</td>
+                        </tr>
+                        <tr id="15" onclick="myfunction('15')" onmouseover="mouseOver('15')" onmouseout="mouseOut('15')">
+                            <td>15</td>
+                            <td id="1501">1110</td>
+                            <td id="1502">-7</td>
+                            <td id="1503">-1</td>
+                            <td id="1504">14</td>
+                            <td id="1505">-6</td>
+                        </tr>
+                        <tr id="16" onclick="myfunction('16')" onmouseover="mouseOver('16')" onmouseout="mouseOut('16')">
+                            <td>16</td>
+                            <td id="1601">1111</td>
+                            <td id="1602">-8</td>
+                            <td id="1603">-0</td>
+                            <td id="1604">15</td>
+                            <td id="1605">-7</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/bitwise.js"></script>
 </body>
 </html>

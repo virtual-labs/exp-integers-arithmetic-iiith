@@ -1,0 +1,77 @@
+html {
+    height : 100%;
+    width: 100%;
+}
+
+body * {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+
+#main-heading {
+    align-content: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2rem;
+    color: #673939;
+}
+
+table.table.table-bordered {
+    background-color: #ffffff;
+    border-width: thick;
+    border-color: #673939;
+    border-top-left-radius: 2rem;
+}
+.table td{
+    padding: 0.25rem;
+    font-size: small;
+}
+
+.table {
+    display: block!important;
+}
+#sno {
+    border-color: black;
+    background-color: #673939;
+}
+
+div.operations button {
+/*    background-color: #eded64;*/
+/*    margin: 0.5rem;*/
+/*    border: 2rem;*/
+/*    padding-left: 0rem;*/
+    font-family: monospace;
+    font-size: 1.2rem;
+    font-weight:bold;
+    width: 9rem;
+    text-align: left;
+}
+
+.table-bordered thead th{
+    border-bottom-color: #673939;
+    border-bottom-width: medium;
+}
+
+#five-switch a {
+    color: black;
+    text-decoration: none;
+}
+
+#four-switch a {
+    color: black;
+    text-decoration: none;
+}
+
+ /* tr:hover {background-color:gold;}  */
+
+/*result table */
+.rtable.table-bordered{
+    border-width: medium;
+    border-color: #0c0b0b;
+    border-radius: 2rem;
+}
+.rtable.table-bordered .ans{
+    min-width: 5rem;
+}

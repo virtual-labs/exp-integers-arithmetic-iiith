@@ -1,0 +1,153 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.25;
+  }
+  
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
+
+table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: .35em;
+}
+
+table th,
+table td {
+  padding: .625em;
+  text-align: left;
+}
+
+table th {
+  font-size: 45%;
+  /* letter-spacing: .1em; */
+  text-transform: uppercase;
+}
+table.table.table-bordered {
+  background-color: #ffffff;
+  border-width: thick;
+  border-color: #673939;
+  border-top-left-radius: 2rem;
+}
+div.operations button {
+    /*    background-color: #eded64;*/
+    /*    margin: 0.5rem;*/
+    /*    border: 2rem;*/
+    /*    padding-left: 0rem;*/
+        font-family: monospace;
+        font-size: 1.2rem;
+        font-weight:bold;
+        width: 9rem;
+        text-align: left;
+}
+.table-bordered thead th{
+    border-bottom-color: #673939;
+    border-bottom-width: 100%;
+}
+.rtable.table-bordered{
+  border-width: medium;
+  border-color:#673939;
+  border-radius: 2rem;
+}
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: .3em;
+  }
+
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .5rem;
+    text-align: left;
+  }
+
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+  table.table.table-bordered {
+      background-color: #ffffff;
+      border-width: thick;
+      border-color: #673939;
+      border-top-left-radius: 2rem;
+  }
+  div.operations button {
+      /*    background-color: #eded64;*/
+      /*    margin: 0.5rem;*/
+      /*    border: 2rem;*/
+      /*    padding-left: 0rem;*/
+          font-family: monospace;
+          font-size: 1.2rem;
+          font-weight:bold;
+          width: 9rem;
+          text-align: left;
+  }
+  .table-bordered thead th{
+      border-bottom-color: #673939;
+      border-bottom-width: 100%;
+  }
+  .rtable.table-bordered{
+    border-width: medium;
+    border-color:#673939;
+    border-radius: 2rem;
+  }
+}
+
+#five-switch a {
+    color: black;
+    text-decoration: none;
+}
+
+#four-switch a {
+    color: black;
+    text-decoration: none;
+}
+#main-heading {
+  align-content: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2rem;
+  color: #673939;
+}
