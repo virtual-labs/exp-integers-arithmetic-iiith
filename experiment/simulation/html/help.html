@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Help</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="../css/co1.css">
+</head>
+<body>
+	<div class="container">
+		<div class="help-page">
+		    <h2>basic theory behind the  application</h2>
+		    <p>This application is basically designed to make the user understand the difference and similarities between different arithmetic representation of integers. The key idea is to be able to observe and understand that some of the arithmetic representation behave isomorhically and hence any of them could be interchangebly used at the backend without the knowledge of the user.</p>
+
+		    <h2> how to use the application</h2>
+		    <p>
+		    <ul>	
+		    	<li><strong>Step 1</strong>-  Select any two rows that you want to add and press the ADD button .</li>
+		        
+		    	<li><strong>Step 2</strong>- The  result will be highlighted as well as displayed in the results table.</li>
+		        
+		    	<li><strong>OVERFLOW</strong>- If the resultant of the two numbers cannot be represented in given number of "bits" , then it is an overflow  which is indicated by the overflow flags.( The actual values requiring higher number of bits will be displayed in the result table for reference)</li>
+		        
+		    	<li><strong>Step 3</strong>- Press reset button for adding new set of numbers.</li>
+			</ul>
+			</p>
+			<button class="btn btn-dark" 
+    			onclick="backfunc()"> 
+        		Back 
+    		</button>
+	    </div>
+	</div>
+	<script type="text/javascript">
+		function backfunc() 
+		{
+
+		if(localStorage.getItem("calledpage") == 'index')
+		{window.location.href = '../index.html';}
+		if(localStorage.getItem("calledpage") == '5-bit')
+		{window.location.href = 'CO1_5-bit.html';}	
+		}
+	</script>
+</body>
+</html>
