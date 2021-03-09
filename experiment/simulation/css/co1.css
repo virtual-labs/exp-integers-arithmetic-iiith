@@ -151,3 +151,22 @@ div.operations button {
   font-size: 2rem;
   color: #673939;
 }
+
+.help-page h2 {
+  padding: 2rem;
+  padding-left: 0;
+  color: #673939;
+  font-size: 2rem;
+  text-transform: capitalize;
+  font-weight: 800;
+}
+.help-page p{
+  font-size: 1.25rem;
+}
+.help-page ul{
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
+.help-page ul li{
+  padding: 1.25rem;
+}
