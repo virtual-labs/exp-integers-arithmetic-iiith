@@ -1,52 +1,41 @@
 body {
     font-family: "Open Sans", sans-serif;
-    line-height: 1.25;
+    line-height:normal;
   }
   
+
 table {
   border: 1px solid #ccc;
-  border-collapse: collapse;
+  border-collapse:collapse;
   margin: 0;
   padding: 0;
   width: 100%;
-  table-layout: fixed;
-}
-
-table caption {
-  font-size: 1.5em;
-  margin: .5em 0 .75em;
+  min-width: 285px;
+  table-layout:fixed;
 }
 
 table tr {
   background-color: #f8f8f8;
   border: 1px solid #ddd;
-  padding: .35em;
 }
 
-table th,
 table td {
-  padding: .625em;
+  font-size: 80%;
   text-align: left;
+  position: relative;
 }
 
 table th {
-  font-size: 45%;
-  /* letter-spacing: .1em; */
-  text-transform: uppercase;
+  font-size: 80%;
+  text-align: left;
 }
 table.table.table-bordered {
   background-color: #ffffff;
-  border-width: thick;
+  border-width:medium;
   border-color: #673939;
-  border-top-left-radius: 2rem;
 }
 div.operations button {
-    /*    background-color: #eded64;*/
-    /*    margin: 0.5rem;*/
-    /*    border: 2rem;*/
-    /*    padding-left: 0rem;*/
         font-family: monospace;
-        font-size: 1.2rem;
         font-weight:bold;
         width: 9rem;
         text-align: left;
@@ -55,86 +44,79 @@ div.operations button {
     border-bottom-color: #673939;
     border-bottom-width: 100%;
 }
+
 .rtable.table-bordered{
   border-width: medium;
+  line-height:  180%;
   border-color:#673939;
-  border-radius: 2rem;
 }
-@media screen and (max-width: 600px) {
-  table {
-    border: 0;
+@media screen and (max-width: 992px){
+  table th{
+font-size: 50%;
+text-align:left;
+font-weight:600;
   }
-
-  table caption {
-    font-size: .3em;
-  }
-
-  table thead {
-    border: none;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-  }
-
-  table tr {
-    border-bottom: 3px solid #ddd;
-    display: block;
-    margin-bottom: .625em;
-  }
-
   table td {
-    border-bottom: 1px solid #ddd;
-    display: block;
-    font-size: .5rem;
+    font-size: 55%;
     text-align: left;
-  }
-
-  table td::before {
-    /*
-    * aria-label has no advantage, it won't be read inside a table
-    content: attr(aria-label);
-    */
-    content: attr(data-label);
-    float: left;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-
-  table td:last-child {
-    border-bottom: 0;
-  }
-  table.table.table-bordered {
-      background-color: #ffffff;
-      border-width: thick;
-      border-color: #673939;
-      border-top-left-radius: 2rem;
-  }
-  div.operations button {
-      /*    background-color: #eded64;*/
-      /*    margin: 0.5rem;*/
-      /*    border: 2rem;*/
-      /*    padding-left: 0rem;*/
-          font-family: monospace;
-          font-size: 1.2rem;
-          font-weight:bold;
-          width: 9rem;
-          text-align: left;
-  }
-  .table-bordered thead th{
-      border-bottom-color: #673939;
-      border-bottom-width: 100%;
   }
   .rtable.table-bordered{
     border-width: medium;
+    line-height:  150%;
     border-color:#673939;
-    border-radius: 2rem;
   }
+
+}
+@media screen and (max-width: 769px){
+  table th{
+font-size: 65%;
+text-align:left;
+font-weight:600;
+  }
+  table td {
+    font-size: 70%;
+    text-align: left;
+  }
+  #anku{
+    font-size: 100%;
+  }
+
 }
 
+ @media screen and (max-width: 490px){
+    table th{
+  font-size: 55%;
+  text-align:left;
+  font-weight:600;
+    }
+    table td {
+      font-size: 55%;
+      text-align: left;
+    }
+    #anku{
+      font-size: 90%;
+    }
+    .rtable.table-bordered{
+      border-width: medium;
+      line-height:  120%;
+      border-color:#673939;
+    }
+  }
+
+  @media screen and (max-width: 445px){
+    table th{
+  font-size: 45%;
+  text-align:left;
+  font-weight:600;
+    }
+    table td {
+      font-size: 55%;
+      text-align: left;
+    }
+    #anku{
+      font-size: 70%;
+    }
+  }
 #five-switch a {
     color: black;
     text-decoration: none;
@@ -147,26 +129,18 @@ div.operations button {
 #main-heading {
   align-content: center;
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: lighter; ;
   font-size: 2rem;
   color: #673939;
 }
 
-.help-page h2 {
-  padding: 2rem;
-  padding-left: 0;
-  color: #673939;
-  font-size: 2rem;
-  text-transform: capitalize;
-  font-weight: 800;
+.message {
+    text-align: center;
+    background-color: yellow;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.4vw;
 }
-.help-page p{
-  font-size: 1.25rem;
-}
-.help-page ul{
-  font-size: 1.25rem;
-  line-height: 1.5rem;
-}
-.help-page ul li{
-  padding: 1.25rem;
+
+#anku{
+  font-size: 120%;
 }

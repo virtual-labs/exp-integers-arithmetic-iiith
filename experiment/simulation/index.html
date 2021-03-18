@@ -9,19 +9,14 @@
     <link rel="stylesheet" type="text/css" href="css/co1.css">
 </head>
 <body onload="active_switch('four-switch')">
-    <div class="container">
-        <div class = " mx-4 my-3 my-sm-3 d-flex flex-row">
-            <div class="row-10 m-auto px-2">
-                <div class = "text-center">
-                    <h1 id = "main-heading">Integer Arithmetic</h1>
-                </div>
+    <div class="container justify-content-center">
+        <div class="grid">
+            <div class="row mx-4 my-3 my-sm-3 d-flex flex-row row-10 m-auto px-4">
+                <h1 id = "main-heading">Integer Arithmetic</h1>
             </div>
-            <button class="btn btn-danger m-auto px-4" 
-                onclick="window.location.href = 'html/help.html'; localStorage.setItem('calledpage','index');
-                    console.log(localStorage.getItem('calledpage'));"> 
-                Help 
-            </button>
-
+            <div class="row">
+                <div class = "message" id = "message" value="message"></div>                
+            </div>
         </div>
 
         <div class= "row">
@@ -36,30 +31,30 @@
                     <h3 class = "mt-5 mb-4" id = "main-heading">Results</h3>
                     <div class="4-bit-result-table">
                         <table class="rtable table-bordered">
-                                <tbody>
+                                <tbody id = "anku">
                                     <tr id="rowbinar">
-                                        <th>1</th>
+                                        <th >1</th>
                                         <td>Binary rep</td>
                                         <td class ="ans" id ="binar"></td>
                                         
                                     </tr>
                                     <tr id = "row2s">
-                                        <th>2</th>
+                                        <th >2</th>
                                         <td>2's comp</td>
                                         <td class="ans" id = "2s"></td>
                                     </tr>
                                     <tr id = "row1s">
-                                        <th>3</th>
+                                        <th >3</th>
                                         <td>1's comp</td>
                                         <td class="ans" id = "1s"></td>
                                     </tr>
                                     <tr id="rowunsigned">
-                                        <th>4</th>
+                                        <th >4</th>
                                         <td>Unsigned</td>
                                         <td id = "unsigned"></td>
                                     </tr>
                                     <tr id="rowsigned">
-                                        <th>5</th>
+                                        <th >5</th>
                                         <td>Signed</td>
                                         <td id = "signed" ></td>
                                     </tr>
@@ -76,10 +71,10 @@
                         <tr>
                             <th scope="col">Sno.</th>
                             <th scope="col">Binary</th>
-                            <th scope="col">2's COMP</th>
-                            <th scope="col">1's COMP</th>
-                            <th scope="col">UNSIGNED</th>
-                            <th scope="col">SIGNED</th>
+                            <th scope="col">2's Comp</th>
+                            <th scope="col">1's Comp</th>
+                            <th scope="col">Unsigned</th>
+                            <th scope="col">Signed</th>
                         </tr>
                     </thead>
     

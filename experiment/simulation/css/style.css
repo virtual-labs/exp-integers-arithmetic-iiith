@@ -13,9 +13,16 @@ box-sizing: border-box;
 #main-heading {
     align-content: center;
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: lighter;
     font-size: 2rem;
     color: #673939;
+}
+
+.message {
+    text-align: center;
+    background-color: yellow;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.4vw;
 }
 
 table.table.table-bordered {
@@ -63,10 +70,6 @@ div.operations button {
     color: black;
     text-decoration: none;
 }
-
- /* tr:hover {background-color:gold;}  */
-
-/*result table */
 .rtable.table-bordered{
     border-width: medium;
     border-color: #0c0b0b;
