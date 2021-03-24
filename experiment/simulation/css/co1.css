@@ -147,6 +147,7 @@ table td {
   }
   table{
     line-height: 50%;
+    min-width: 100px;
   }
   table th{
     font-size: 2.5vw;
