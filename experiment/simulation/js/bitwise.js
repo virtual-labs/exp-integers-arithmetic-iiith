@@ -1,6 +1,6 @@
 let messages=[
 "Hover over the 4-bit table and Select any two rows to add",
-"Results are highlighted green and overflow is diplayed in result table\nClick on 5-bit table to switch",
+"Results are highlighted green and overflow is displayed in result table\nClick on 5-bit table to switch",
 "Click on reset to clear and restart anytime",
 ]
 mat = []
@@ -16,9 +16,21 @@ sameelemflag = 0
 let glob = 0
 let flag = 0
 let afteradd = 0
-let message = messages[0].fontsize("3%");
+let message = messages[0].fontsize("5vw");
 document.getElementById("message").innerHTML = message;
-
+// var win = window,
+//     doc = document,
+//     docElem = doc.documentElement,
+//     body = doc.getElementsByTagName('body')[0],
+//     x = win.innerWidth || docElem.clientWidth || body.clientWidth
+// console.log("screen width is ")
+// console.log(x)
+// if (x < 350) {
+//     console.log("hi")
+//     document.getElementById('ab').innerHTML = "Un sig ned";
+//     document.getElementById('cd').innerHTML = "Si gn ed";
+//     document.getElementById('ef').innerHTML = "Bi na ry";
+// }
 function active_switch(switch_from)
 {
     if(switch_from=="five-switch")
@@ -110,13 +122,13 @@ function reset()
     coloredidx = []
     deleterow()
     resultarray = [0,0,0,0,0];
-    let message = messages[0].fontsize("3%");
+    let message = messages[0].fontsize("5vw");
     document.getElementById("message").innerHTML = message;  
 
 }
 function addfunc()
 {
-    let message = messages[1].fontsize("3%");
+    let message = messages[1].fontsize("5vw");
     document.getElementById("message").innerHTML = message;
     if (glob==2)
     {
@@ -204,7 +216,7 @@ function myfunction(a1)
                         }
                     }
                     document.getElementById(a1).style.backgroundColor='rgb(252, 126, 139)'
-                    let message=messages[0].fontsize("3%");
+                    let message=messages[0].fontsize("5vw");
                     document.getElementById("message").innerHTML = message; 
 
                 }
@@ -460,7 +472,7 @@ function bitadd(a,b)
     resultarray[3]=setgreencolor(4,document.getElementById('unsigned').innerHTML)
     resultarray[4]=setgreencolor(5,document.getElementById('signed').innerHTML)
     addoverflow();
-    let message = messages[1].fontsize("3%");
+    let message = messages[1].fontsize("5vw");
     document.getElementById("message").innerHTML = message;
     
 }

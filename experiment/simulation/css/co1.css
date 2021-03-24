@@ -1,146 +1,167 @@
 body {
-    font-family: "Open Sans", sans-serif;
-    line-height:normal;
-  }
-  
+  font-family: "Open Sans", sans-serif;
+  line-height:normal;
+}
+
 
 table {
-  border: 1px solid #ccc;
-  border-collapse:collapse;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  min-width: 285px;
-  table-layout:fixed;
+border: 2px solid #ccc;
+border-collapse:collapse;
+margin: 0;
+padding: 0;
+width: 100%;
+border-width: medium;
+line-height:  210%;
+border-color:#673939;
 }
 
 table tr {
-  background-color: #f8f8f8;
-  border: 1px solid #ddd;
+background-color: #f8f8f8;
+border: 2.5px solid #673939;
 }
 
 table td {
-  font-size: 80%;
-  text-align: left;
-  position: relative;
+font-size: 85%;
+text-align: center;
+position: relative;
+border: 1.25px solid #673939;
 }
 
 table th {
-  font-size: 80%;
-  text-align: left;
+font-size: 85%;
+text-align: center;
+border: 2px solid #673939;
 }
+
 table.table.table-bordered {
-  background-color: #ffffff;
-  border-width:medium;
-  border-color: #673939;
+background-color: #ffffff;
+border-width:medium;
+border-color: #673939;
 }
 div.operations button {
-        font-family: monospace;
-        font-weight:bold;
-        width: 9rem;
-        text-align: left;
+      font-family: monospace;
+      font-weight:bold;
+      width: 9rem;
+      text-align: left;
 }
 .table-bordered thead th{
-    border-bottom-color: #673939;
-    border-bottom-width: 100%;
+  border-bottom-color: #673939;
+  border-bottom-width: 100%;
 }
+.table-bordered td{
+border: 2px solid #673939;}
 
 .rtable.table-bordered{
-  border-width: medium;
-  line-height:  180%;
-  border-color:#673939;
+border-width: medium;
+border-color:#673939;
 }
-@media screen and (max-width: 992px){
-  table th{
-font-size: 50%;
-text-align:left;
-font-weight:600;
-  }
-  table td {
-    font-size: 55%;
-    text-align: left;
-  }
-  .rtable.table-bordered{
-    border-width: medium;
-    line-height:  150%;
-    border-color:#673939;
-  }
-
-}
-@media screen and (max-width: 769px){
-  table th{
-font-size: 65%;
-text-align:left;
-font-weight:600;
-  }
-  table td {
-    font-size: 70%;
-    text-align: left;
-  }
-  #anku{
-    font-size: 100%;
-  }
-
-}
-
- @media screen and (max-width: 490px){
-    table th{
-  font-size: 55%;
-  text-align:left;
-  font-weight:600;
-    }
-    table td {
-      font-size: 55%;
-      text-align: left;
-    }
-    #anku{
-      font-size: 90%;
-    }
-    .rtable.table-bordered{
-      border-width: medium;
-      line-height:  120%;
-      border-color:#673939;
-    }
-  }
-
-  @media screen and (max-width: 445px){
-    table th{
-  font-size: 45%;
-  text-align:left;
-  font-weight:600;
-    }
-    table td {
-      font-size: 55%;
-      text-align: left;
-    }
-    #anku{
-      font-size: 70%;
-    }
-  }
 #five-switch a {
-    color: black;
-    text-decoration: none;
+color: black;
+text-decoration: none;
+
 }
 
 #four-switch a {
-    color: black;
-    text-decoration: none;
+color: black;
+text-decoration: none;
 }
+
 #main-heading {
-  align-content: center;
-  text-transform: uppercase;
-  font-weight: lighter; ;
-  font-size: 2rem;
-  color: #673939;
+align-content: center;
+text-align: center;
+text-transform: uppercase;
+font-weight: bold;
+font-size: 2.7vw;
+color: #673939;
 }
-
+#result-heading {
+align-content: center;
+text-align: center;
+text-transform: uppercase;
+font-weight: bold;
+font-size: 2.4vw;
+color: #673939;
+}
 .message {
-    text-align: center;
-    background-color: yellow;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.4vw;
+text-align: center;
+background-color: yellow;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 1.4vw;
+
 }
 
-#anku{
-  font-size: 120%;
+.br
+{
+ display: block;
+ margin-bottom: 2em;
 }
+
+.btn
+{
+ font-weight:bold;
+ font-family: sans-serif;
+ text-align:left;
+ font-size:70%;
+ background-color:#ffcc00;
+ width:100px;
+}
+#anku{
+font-size: 90%;
+}
+@media screen and (max-width: 769px){
+#four-bit-table{
+  margin-top: 50px;
+}
+#main-heading{
+  font-size: 3.5vw;
+}
+
+table th{
+  font-size: 75%;
+  text-align:center;
+  font-weight:600;
+}
+table td {
+  font-size: 75%;
+  text-align: center;
+}
+#anku{
+  font-size: 85%;
+}
+#result-heading{
+  font-size: 4vw;
+  font-weight: bold;
+}
+.btn{
+    font-size:60%;
+    width:24%;
+  }
+
+}
+
+@media screen and (max-width: 380px){
+  table{
+    line-height: 150%;
+  }
+  table th{
+    font-size: 2.5vw;
+    text-align:center;
+    font-weight:600;
+  }
+  table td {
+    font-size: 2.5vw;
+    text-align: center;
+  }
+  #main-heading{
+    font-size: 6vw;
+  }
+  #anku{
+    font-size: 70%;
+  }
+  .btn
+  {
+    font-size:3vw;
+    width: 40%;
+  }
+}
+
