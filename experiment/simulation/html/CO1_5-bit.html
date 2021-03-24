@@ -21,41 +21,44 @@
     <div class= "row">
         <div class = "col-md-5">
             <div class="col">
-            <div class ="operations row-xs-12 row-sm-12 row-6 m-auto pt-5">
-
-                <button onclick="addfunc()" class="btn btn-warning m-3 py-2">Add</button>
-                <button onclick="reset()" class="btn btn-warning m-3 py-2">RESET</button>
-                <button class = "bitswitch btn btn-warning m-3 py-2" id ="four-switch"><a href="../index.html">4-bit Table</a></button>  
+            <div class ="buttons">
+                <span class="br"></span>
+                <button onclick="addfunc()" class="btn">Add</button>
+                <span class="br"></span>
+                <button onclick="reset()" class="btn">RESET</button>
+                <span class="br"></span>
+                <button class = "bitswitch btn " id ="four-switch"><a href="../index.html">4-bit Table</a></button>  
+                <span class="br"></span>
             </div>
             <div class ="results row-xs-12 row-sm-12 row-6 m-auto p-2">
-                <h3 class = "mt-5 mb-4" id = "main-heading">Results</h3>
+                <h3 class = "mt-5 mb-4" id = "result-heading">Results</h3>
             <div class="4-bit-result-table">
             <table class="m-auto rtable table-bordered">
                 <tbody>
                     <tr id="rowbinar">
-                        <th>1</th>
-                        <td>Binary rep</td>
+                        <td>1</td>
+                        <th>Binary rep</th>
                         <td class="ans" id ="binar"></td>
                         
                     </tr>
                     <tr id = 'row2s'>
-                        <th>2</th>
-                        <td>2's comp</td>
+                        <td>2</td>
+                        <th>2's comp</th>
                         <td class="ans" id = "2s"></td>
                     </tr>
                     <tr id="row1s">
-                        <th>3</th>
-                        <td>1's comp</td>
+                        <td>3</td>
+                        <th>1's comp</th>
                         <td class="ans" id = "1s"></td>
                     </tr>
                     <tr id="rowunsigned">
-                        <th>4</th>
-                        <td>Unsigned</td>
+                        <td>4</td>
+                        <th>Unsigned</th>
                         <td class="ans" id = "unsigned"></td>
                     </tr>
                     <tr id="rowsigned">
-                        <th>5</th>
-                        <td>Signed</td>
+                        <td>5</td>
+                        <th>Signed</th>
                         <td class="ans" id = "signed" ></td>
                     </tr>
                 </tbody>
@@ -67,7 +70,7 @@
         </div>
         <div class="col-md-7">
         <div class="bit-table m-auto pt-5">
-            <table class="table table-bordered mb-0" id="five-bit-table">
+            <table id="five-bit-table">
                 <thead>
                     <tr>
                         <th scope="col">#</th>

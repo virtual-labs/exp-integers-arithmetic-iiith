@@ -1,6 +1,6 @@
 let messages=[
 "Hover over the 5-bit table and Select any two rows to add",
-"Results are highlighted green and overflow is diplayed in result table\nClick on 4-bit table to switch",
+"Results are highlighted green and overflow is displayed in result table\nClick on 4-bit table to switch",
 "Click on reset to clear and restart anytime",
 ]
 mat = []
@@ -15,9 +15,19 @@ vis = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 sameelemflag = 0
 let glob = 0
 let flag = 0
-let message = messages[0].fontsize("3%");
+let message = messages[0].fontsize("5%");
 document.getElementById("message").innerHTML = message;
-
+var width = window.innerWidth
+|| document.documentElement.clientWidth
+|| document.body.clientWidth;
+console.log("screen width is ")
+console.log(width)
+if (width < 350) {
+    console.log("hi")
+    document.getElementById('ab').innerHTML = "Un sig ned";
+    document.getElementById('cd').innerHTML = "Si gn ed";
+    document.getElementById('ef').innerHTML = "Bi na ry";
+}
 function addoverflow()
 {
     for (var i=0;i<5;i++)
@@ -89,7 +99,7 @@ function reset()
     coloredidx = []
     deleterow()
     resultarray = [0,0,0,0,0];
-    let message = messages[0].fontsize("3%");
+    let message = messages[0].fontsize("5%");
     document.getElementById("message").innerHTML = message;  
 
 
@@ -436,6 +446,6 @@ function bitadd(a,b)
     resultarray[3]=setgreencolor(4,document.getElementById('unsigned').innerHTML)
     resultarray[4]=setgreencolor(5,document.getElementById('signed').innerHTML)
     addoverflow();
-    let message = messages[1].fontsize("3%");
+    let message = messages[1].fontsize("5%");
     document.getElementById("message").innerHTML = message;
 }
