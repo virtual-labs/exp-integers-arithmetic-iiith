@@ -158,6 +158,13 @@ table td {
   #anku{
     font-size: 70%;
   }
+  #five-bit-table{
+    width:90%;
+  }
+  #four-bit-table
+  {
+    width:90%;
+  }
   .btn
   {
     font-size:3vw;
