@@ -13,6 +13,7 @@ width: 100%;
 border-width: medium;
 line-height:  210%;
 border-color:#673939;
+min-width: 150px;
 }
 
 table tr {
@@ -73,6 +74,7 @@ text-transform: uppercase;
 font-weight: bold;
 font-size: 2.7vw;
 color: #673939;
+/* min-width: 280px; */
 }
 #result-heading {
 align-content: center;
@@ -81,12 +83,12 @@ text-transform: uppercase;
 font-weight: bold;
 font-size: 2.4vw;
 color: #673939;
+/* min-width: 280px; */
 }
 .message {
 text-align: center;
 background-color: yellow;
 font-family: Arial, Helvetica, sans-serif;
-font-size: 1.4vw;
 
 }
 
@@ -109,9 +111,6 @@ font-size: 1.4vw;
 font-size: 90%;
 }
 @media screen and (max-width: 769px){
-#four-bit-table{
-  margin-top: 50px;
-}
 #main-heading{
   font-size: 3.5vw;
 }
@@ -138,10 +137,16 @@ table td {
   }
 
 }
-
+ #result{
+  min-width: 100px;
+}
 @media screen and (max-width: 380px){
+  .message{
+    font-size: 1vw;
+
+  }
   table{
-    line-height: 150%;
+    line-height: 110%;
   }
   table th{
     font-size: 2.5vw;
@@ -157,18 +162,17 @@ table td {
   }
   #anku{
     font-size: 70%;
-  }
-  #five-bit-table{
-    width:90%;
-  }
-  #four-bit-table
-  {
-    width:90%;
+    
   }
   .btn
   {
     font-size:3vw;
     width: 40%;
+  }
+  .br
+  {
+  display: block;
+  margin-bottom: 1em;
   }
 }
 
