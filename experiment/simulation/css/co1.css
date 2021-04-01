@@ -78,13 +78,13 @@ color: #363636;
 font-weight: bold;
 font-size: 2vw;
 color: #363636;
-/* min-width: 280px; */
 }
 .message {
 text-align: center;
-background-color: #ffd700;
+background-color: rgb(164, 198, 82);
 font-family: Arial, Helvetica, sans-serif;
 font-size:1.5vw;
+
 
 }
 

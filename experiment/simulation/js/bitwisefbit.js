@@ -40,9 +40,10 @@ function addoverflow()
         rowvar = document.getElementById(resultarrayname[i])
         newcell = rowvar.insertCell(-1)
         if(resultarray[i]==0){
-            newcell.innerHTML="overflow"
-            newcell.style.fontSize = "x-small" 
-            newcell.style.backgroundColor="#ff3b1f"
+            newcell.innerHTML="overflow";
+            newcell.style.fontSize = "x-small" ;
+            newcell.style.color="#ff3b1f";
+            newcell.style.fontWeight='bold';
         }
             visitedarray[i]=1            
     }
@@ -64,7 +65,7 @@ function mouseOver(indx)
 {
     if(vis[parseInt(indx)]==0)
     {
-        document.getElementById(indx).style.backgroundColor='#c3d8ed'
+        document.getElementById(indx).style.color=''
     }
 }
 function mouseOut(indx)
