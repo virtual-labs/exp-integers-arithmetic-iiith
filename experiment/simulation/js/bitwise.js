@@ -16,21 +16,8 @@ sameelemflag = 0
 let glob = 0
 let flag = 0
 let afteradd = 0
-let message = messages[0].fontsize("5vw");
+let message = messages[0];
 document.getElementById("message").innerHTML = message;
-// var win = window,
-//     doc = document,
-//     docElem = doc.documentElement,
-//     body = doc.getElementsByTagName('body')[0],
-//     x = win.innerWidth || docElem.clientWidth || body.clientWidth
-// console.log("screen width is ")
-// console.log(x)
-// if (x < 350) {
-//     console.log("hi")
-//     document.getElementById('ab').innerHTML = "Un sig ned";
-//     document.getElementById('cd').innerHTML = "Si gn ed";
-//     document.getElementById('ef').innerHTML = "Bi na ry";
-// }
 function active_switch(switch_from)
 {
     if(switch_from=="five-switch")
@@ -61,7 +48,7 @@ function addoverflow()
         if(resultarray[i]==0){
             newcell.innerHTML="overflow"
             newcell.style.fontSize = "x-small" 
-            newcell.style.backgroundColor="#ff3a3a"
+            newcell.style.backgroundColor="#ff3b1f"
         }
         visitedarray[i]=1            
     }
@@ -83,7 +70,7 @@ function mouseOver(indx)
 {
     if(vis[parseInt(indx)]==0)
     {
-    document.getElementById(indx).style.backgroundColor='#FFFF28'
+    document.getElementById(indx).style.backgroundColor='#c3d8ed'
     }
 }
 function mouseOut(indx)
@@ -122,14 +109,12 @@ function reset()
     coloredidx = []
     deleterow()
     resultarray = [0,0,0,0,0];
-    let message = messages[0].fontsize("5vw");
+    let message = messages[0];
     document.getElementById("message").innerHTML = message;  
 
 }
 function addfunc()
 {
-    let message = messages[1].fontsize("5vw");
-    document.getElementById("message").innerHTML = message;
     if (glob==2)
     {
         ar1 = []
@@ -215,8 +200,8 @@ function myfunction(a1)
                             sameelemflag=1
                         }
                     }
-                    document.getElementById(a1).style.backgroundColor='rgb(252, 126, 139)'
-                    let message=messages[0].fontsize("5vw");
+                    document.getElementById(a1).style.backgroundColor='#5da0d1'
+                    let message=messages[0];
                     document.getElementById("message").innerHTML = message; 
 
                 }
@@ -239,7 +224,7 @@ function myfunction(a1)
                     {
                         sameelemflag=1
                     }
-                    document.getElementById(a1).style.backgroundColor='rgb(252, 126, 139)'
+                    document.getElementById(a1).style.backgroundColor='#5da0d1'
                     vis[a1]=1
 
                 }
@@ -472,7 +457,7 @@ function bitadd(a,b)
     resultarray[3]=setgreencolor(4,document.getElementById('unsigned').innerHTML)
     resultarray[4]=setgreencolor(5,document.getElementById('signed').innerHTML)
     addoverflow();
-    let message = messages[1].fontsize("5vw");
+    let message = messages[1];
     document.getElementById("message").innerHTML = message;
     
 }
