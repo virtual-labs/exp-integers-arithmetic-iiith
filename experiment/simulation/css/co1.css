@@ -85,7 +85,6 @@ text-align: center;
 background-color: rgb(164, 198, 82);
 font-family: Arial, Helvetica, sans-serif;
 font-size:1.5vw;
-
 }
 
 .br
@@ -119,7 +118,8 @@ font-size: 90%;
 }
 .message{
     font-size: 4vw;
-
+    margin-left: 10px;
+    margin-right: 10px;
   }
 table th{
   font-size: 75%;
@@ -149,6 +149,8 @@ table td {
 @media screen and (max-width: 360px){
   .message{
     font-size: 5vw;
+    margin-left: 10px;
+    margin-right: 10px;
 
   }
   table{
