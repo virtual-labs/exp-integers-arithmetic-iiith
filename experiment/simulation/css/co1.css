@@ -57,36 +57,34 @@ border-width: medium;
 border-color:#673939;
 }
 #five-switch a {
-color: black;
+color: white;
 text-decoration: none;
 
 }
 
 #four-switch a {
-color: black;
+color: white;
 text-decoration: none;
 }
 
 #main-heading {
 align-content: center;
 text-align: center;
-text-transform: uppercase;
-font-weight: bold;
-font-size: 2.7vw;
-color: #673939;
+font-weight: 600;
+font-size: 2.3vw;
+color: #363636;
 }
 #result-heading {
-align-content: center;
-text-align: center;
-text-transform: uppercase;
 font-weight: bold;
-font-size: 2.4vw;
-color: #673939;
+font-size: 2vw;
+color: #363636;
+/* min-width: 280px; */
 }
 .message {
 text-align: center;
-background-color: yellow;
+background-color: #ffd700;
 font-family: Arial, Helvetica, sans-serif;
+font-size:1.5vw;
 
 }
 
@@ -98,21 +96,31 @@ font-family: Arial, Helvetica, sans-serif;
 
 .btn
 {
- font-weight:bold;
+ border-radius: 16px;
+ border: none;
  font-family: sans-serif;
  text-align:left;
- font-size:70%;
- background-color:#ffcc00;
+ font-size:0.7vw;
+ background-color:#288EC8;
  width:100px;
+ color: white;
+}
+.btn:hover{
+  background-color: #A9A9A9;
 }
 #anku{
 font-size: 90%;
 }
 @media screen and (max-width: 769px){
 #main-heading{
-  font-size: 3.5vw;
+  padding-top: 10px;
+  text-align: center;
+  font-size: 5.4vw;
 }
+.message{
+    font-size: 4vw;
 
+  }
 table th{
   font-size: 75%;
   text-align:center;
@@ -126,26 +134,27 @@ table td {
   font-size: 85%;
 }
 #result-heading{
-  font-size: 4vw;
+  font-size: 5vw;
   font-weight: bold;
 }
 .btn{
     font-size:60%;
-    width:24%;
+    width:44%;
   }
 
 }
  #result{
   min-width: 100px;
 }
-@media screen and (max-width: 380px){
+@media screen and (max-width: 360px){
   .message{
-    font-size: 1vw;
+    font-size: 5vw;
 
   }
   table{
-    line-height: 50%;
+    line-height: 100%;
     min-width: 100px;
+    border: 1px solid #ccc;
   }
   table th{
     font-size: 2.5vw;
@@ -157,6 +166,7 @@ table td {
     text-align: center;
   }
   #main-heading{
+    padding-top: 10px;
     font-size: 6vw;
   }
   #anku{
@@ -166,7 +176,7 @@ table td {
   .btn
   {
     font-size:3vw;
-    width: 40%;
+    width: 30%;
   }
   .br
   {

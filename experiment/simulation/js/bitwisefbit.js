@@ -15,7 +15,7 @@ vis = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 sameelemflag = 0
 let glob = 0
 let flag = 0
-let message = messages[0].fontsize("5%");
+let message = messages[0];
 document.getElementById("message").innerHTML = message;
 var width = window.innerWidth
 || document.documentElement.clientWidth
@@ -42,7 +42,7 @@ function addoverflow()
         if(resultarray[i]==0){
             newcell.innerHTML="overflow"
             newcell.style.fontSize = "x-small" 
-            newcell.style.backgroundColor="#ff3a3a"
+            newcell.style.backgroundColor="#ff3b1f"
         }
             visitedarray[i]=1            
     }
@@ -64,7 +64,7 @@ function mouseOver(indx)
 {
     if(vis[parseInt(indx)]==0)
     {
-        document.getElementById(indx).style.backgroundColor='#FFFF28'
+        document.getElementById(indx).style.backgroundColor='#c3d8ed'
     }
 }
 function mouseOut(indx)
@@ -99,7 +99,7 @@ function reset()
     coloredidx = []
     deleterow()
     resultarray = [0,0,0,0,0];
-    let message = messages[0].fontsize("5%");
+    let message = messages[0];
     document.getElementById("message").innerHTML = message;  
 
 
@@ -192,7 +192,9 @@ function myfunction(a1)
                             sameelemflag=1
                         }
                     }
-                    document.getElementById(a1).style.backgroundColor='rgb(252, 126, 139)'
+                    document.getElementById(a1).style.backgroundColor='#5da0d1'
+                    let message=messages[0];
+                    document.getElementById("message").innerHTML = message;
                 }
                 else
                 {
@@ -213,7 +215,7 @@ function myfunction(a1)
                     {
                         sameelemflag=1
                     }
-                    document.getElementById(a1).style.backgroundColor='rgb(252, 126, 139)'
+                    document.getElementById(a1).style.backgroundColor='#5da0d1'
                     vis[a1]=1
 
                 }
@@ -446,6 +448,6 @@ function bitadd(a,b)
     resultarray[3]=setgreencolor(4,document.getElementById('unsigned').innerHTML)
     resultarray[4]=setgreencolor(5,document.getElementById('signed').innerHTML)
     addoverflow();
-    let message = messages[1].fontsize("5%");
+    let message = messages[1];
     document.getElementById("message").innerHTML = message;
 }
