@@ -120,11 +120,7 @@ function addfunc()
     {
         ar1 = []
         ar2 = []
-        for (let i=0;i<tobeadded.length;i++)
-        {
 
-            // console.log(tobeadded[i])
-        }
         for (let i = 0;i<2;i++)
         {
             for (let j =0; j<tobeadded[i].length;j++)
