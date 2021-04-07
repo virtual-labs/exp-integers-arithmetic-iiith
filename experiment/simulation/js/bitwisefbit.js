@@ -41,8 +41,8 @@ function addoverflow()
         newcell = rowvar.insertCell(-1)
         if(resultarray[i]==0){
             newcell.innerHTML="overflow";
-            newcell.style.fontSize = "x-small" ;
-            newcell.style.color="#ff3b1f";
+            newcell.style.fontSize = "small" ;
+            newcell.style.color="rgb(164, 198, 82)";
             newcell.style.fontWeight='bold';
         }
             visitedarray[i]=1            
@@ -150,11 +150,15 @@ function myfunction(a1)
         for (var i=0;i<selectedrow.length;i++)
         {
         document.getElementById(selectedrow[i]).style.backgroundColor='transparent'
+        document.getElementById(selectedrow[i]).style.color='black'
+
         
         }
         for (var i=0;i<coloredidx.length;i++)
         {
-        document.getElementById(coloredidx[i]).style.backgroundColor='transparent'
+        document.getElementById(coloredidx[i]).style.backgroundColor='transparent';
+        document.getElementById(coloredidx[i]).style.color='black';
+
         }
         selectedrow = []
         coloredidx = []
@@ -384,7 +388,9 @@ function bitadd(a,b)
              {
                  var index = (100*(i+1)+idx)
                  coloredidx.push(index)
-                 document.getElementById(index).style.backgroundColor='rgb(157, 253, 171)'
+                 document.getElementById(index).style.backgroundColor='rgb(164, 198, 82)';
+          		 document.getElementById(index).style.color='white'
+
                  flag = 1
                  break
              }
