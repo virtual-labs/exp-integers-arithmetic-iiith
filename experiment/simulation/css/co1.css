@@ -85,6 +85,7 @@ text-align: center;
 background-color: rgb(164, 198, 82);
 font-family: Arial, Helvetica, sans-serif;
 font-size:1.5vw;
+color: white;
 }
 
 .br
@@ -110,7 +111,7 @@ font-size:1.5vw;
 #anku{
 font-size: 90%;
 }
-@media screen and (max-width: 769px){
+@media screen and(max-width: 769px) {
 #main-heading{
   padding-top: 10px;
   text-align: center;
@@ -146,7 +147,46 @@ table td {
  #result{
   min-width: 100px;
 }
-@media screen and (max-width: 360px){
+@media screen and (max-width: 1570px)
+{
+  .message{
+    font-size: 2vh;
+    margin-left: 10px;
+    margin-right: 10px;
+
+  }
+  #main-heading{
+    padding-top: 10px;
+    font-size: 3vh;
+  }
+  #result-heading{
+    font-size: 3vh;
+  }
+  .btn{
+    font-size:70%;
+  }
+}
+@media screen and (max-width: 768px)
+{
+  .message{
+    font-size: 2vh;
+    margin-left: 10px;
+    margin-right: 10px;
+
+  }
+  #main-heading{
+    padding-top: 10px;
+    font-size: 3vh;
+  }
+  #result-heading{
+    font-size: 6vw;
+  }
+  .btn{
+    font-size:70%;
+  }
+}
+
+@media screen and (max-width: 380px){
   .message{
     font-size: 5vw;
     margin-left: 10px;
@@ -186,4 +226,25 @@ table td {
   margin-bottom: 1em;
   }
 }
-
+@media screen and (max-width: 200px)
+{
+  .message{
+    font-size: 1.3vh;
+  }
+  table{
+    line-height:150%;
+  }
+  table td {
+    font-size: 1vh;
+    text-align: center;
+  }
+   table th{
+    font-size: 0.4vh;
+    text-align:center;
+    font-weight:600;
+  }
+  .btn{
+    width: 100%;
+    font-size: 1vh;
+  }
+}
