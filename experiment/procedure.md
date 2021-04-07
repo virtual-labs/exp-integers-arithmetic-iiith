@@ -1,5 +1,3 @@
-## Basic Theory behind the Application
-
 This application is basically designed to make the user understand the difference and similarities between different arithmetic representation of integers. The key idea is to be able to observe and understand that some of the arithmetic representation behave isomorhically and hence any of them could be interchangebly used at the backend without the knowledge of the user.
 
 ## How to use the Application
