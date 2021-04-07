@@ -41,8 +41,8 @@ function addoverflow()
         newcell = rowvar.insertCell(-1)
         if(resultarray[i]==0){
             newcell.innerHTML="overflow";
-            newcell.style.fontSize = "small" ;
-            newcell.style.color="rgb(164, 198, 82)";
+            newcell.style.fontSize = "x-small" ;
+            newcell.style.backgroundColor="rgb(164, 198, 82)";
             newcell.style.fontWeight='bold';
         }
             visitedarray[i]=1            
