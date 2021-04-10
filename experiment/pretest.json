@@ -1,5 +1,5 @@
 [
-{"Sign magnitude is a very simple representation of ?",
+{"question":"Sign magnitude is a very simple representation of ?",
 "answers":{
             "a":"Positive number",
             "b":"Infinity",
@@ -7,9 +7,8 @@
             "d":"Negative numbers"
           },
 "correctAnswer":"d"},
-{
-"correctAnswer":"a"},
-"question":"Which method of representation has two representations for ‘0’ ?",
+
+{"question":"Which method of representation has two representations for ‘0’ ?",
 "answers":{
             "a":"Sign-magnitude",
             "b":"1’s compliment",
