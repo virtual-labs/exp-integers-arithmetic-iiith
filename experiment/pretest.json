@@ -7,12 +7,14 @@
             "d":"Negative numbers"
           },
 "correctAnswer":"d"},
-{"question":"Which of the following cases leads to the overflow condition in addition using 2’s complement?",
+{
+"correctAnswer":"a"},
+"question":"Which method of representation has two representations for ‘0’ ?",
 "answers":{
-            "a":"Addition of two positive numbers, which results in sum ≥ 2^(n-1)",
-            "b":"Addition of two positive numbers, which results in sum < 2^(n–1)",
-            "c":"Addition of two negative numbers, |sum| ≤ 2^(n–1)",
-            "d":"Addition of two negative numbers, |sum| > 2^(n–1)"
+            "a":"Sign-magnitude",
+            "b":"1’s compliment",
+            "c":"2's complement form",
+            "d":"None of the above"
           },
 "correctAnswer":"a"} 
 ]
