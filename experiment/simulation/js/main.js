@@ -1,33 +1,39 @@
-const messages=[
-"Hover over the 5-bit table and Select any two rows to add",
-"Results are highlighted green and overflow is displayed in result table\nClick on 4-bit table to switch",
+let messages=[
+"Hover over the 4-bit table and Select any two rows to add",
+"Results are highlighted green and overflow is displayed in result table\nClick on 5-bit table to switch",
 "Click on reset to clear and restart anytime",
-]
+];
 let mat = [];
 let temp = [];
 let tobeadded = [];
 let selectedrow = [];
 let coloredidx = [];
 let resultarray = [0,0,0,0,0];
-let visitedarray = [0,0,0,0,0] ;
+let visitedarray = [0,0,0,0,0]; 
 let resultarrayname = ['rowbinar','row2s','row1s','rowunsigned','rowsigned'];
-let vis = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
-let sameelemflag = 0;
+vis = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+sameelemflag = 0;
 let glob = 0;
 let flag = 0;
+let afteradd = 0;
 let message = messages[0];
 document.getElementById("message").innerHTML = message;
-var width = window.innerWidth
-|| document.documentElement.clientWidth
-|| document.body.clientWidth;
-console.log("screen width is ");
-console.log(width);
-if (width < 350) {
-    console.log("hi")
-    document.getElementById('ab').innerHTML = "Un sig ned";
-    document.getElementById('cd').innerHTML = "Si gn ed";
-    document.getElementById('ef').innerHTML = "Bi na ry";
+function active_switch(switch_from)
+{
+    if(switch_from==="five-switch")
+    {
+        console.log('why is this"what is this?');
+        $(document.getElementById(switch_from)).hide();
+        $(document.getElementById('four-switch')).show();
+    }
+    else
+    {
+        $(document.getElementById(switch_from)).hide();
+        $(document.getElementById('five-switch')).show();
+    }
+
 }
+
 function addoverflow()
 {
     for (var i=0;i<5;i++)
@@ -41,11 +47,11 @@ function addoverflow()
         newcell = rowvar.insertCell(-1);
         if(resultarray[i]===0){
             newcell.innerHTML="overflow";
-            newcell.style.fontSize = "x-small" ;
+            newcell.style.fontSize = "x-small";
             newcell.style.backgroundColor="rgb(164, 198, 82)";
-            newcell.style.fontWeight='bold';
+            newcell.style.fontWeight ='bolder';
         }
-            visitedarray[i]=1  ;          
+        visitedarray[i]=1;            
     }
 
 }
@@ -65,7 +71,7 @@ function mouseOver(indx)
 {
     if(vis[parseInt(indx)]===0)
     {
-        document.getElementById(indx).style.color='';
+        document.getElementById(indx).style.backgroundColor='#c3d8ed';
     }
 }
 function mouseOut(indx)
@@ -77,7 +83,7 @@ function mouseOut(indx)
 }
 function reset()
 {
-    vis = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+    vis = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
     mat = [];
     temp = [];
     tobeadded = [];
@@ -86,6 +92,10 @@ function reset()
     document.getElementById('1s').innerHTML='';
     document.getElementById('unsigned').innerHTML='';
     document.getElementById('signed').innerHTML='';
+    if (glob!=0||afteradd===1)
+    {
+        afteradd=0;
+    }
     glob=0;
     for (var i=0;i<selectedrow.length;i++)
     {
@@ -102,7 +112,6 @@ function reset()
     resultarray = [0,0,0,0,0];
     let message = messages[0];
     document.getElementById("message").innerHTML = message;  
-
 
 }
 function addfunc()
@@ -129,11 +138,12 @@ function addfunc()
         glob = 0;
         tobeadded = [];
         sameelemflag=0;
-        
+        afteradd=1;
     }
 }
 function myfunction(a1)
 {
+    
     if (glob===0)
     {
         document.getElementById('binar').innerHTML='';
@@ -141,12 +151,11 @@ function myfunction(a1)
         document.getElementById('1s').innerHTML='';
         document.getElementById('unsigned').innerHTML='';
         document.getElementById('signed').innerHTML='';
-        vis = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+        vis = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
         for (var i=0;i<selectedrow.length;i++)
         {
-        document.getElementById(selectedrow[i]).style.backgroundColor='transparent';
-        document.getElementById(selectedrow[i]).style.color='black';
-
+            document.getElementById(selectedrow[i]).style.backgroundColor='transparent';
+            document.getElementById(selectedrow[i]).style.color='black';
         
         }
         for (var i=0;i<coloredidx.length;i++)
@@ -157,13 +166,12 @@ function myfunction(a1)
         }
         selectedrow = [];
         coloredidx = [];
+        afteradd=0;
         deleterow();
         resultarray = [0,0,0,0,0];
     }
     
-    console.log(a1);
-    let table= document.getElementById("five-bit-table");
-
+    let table= document.getElementById("four-bit-table");
     for (let r=1,n=table.rows.length;r<n ; r++)
     {
         temp = [];
@@ -193,7 +201,8 @@ function myfunction(a1)
                     }
                     document.getElementById(a1).style.backgroundColor='#5da0d1';
                     let message=messages[0];
-                    document.getElementById("message").innerHTML = message;
+                    document.getElementById("message").innerHTML = message; 
+
                 }
                 else
                 {
@@ -201,15 +210,15 @@ function myfunction(a1)
                     glob=2;
                     if(sameelemflag===0)
                     {
-                        document.getElementById(selectedrow[1]).style.backgroundColor='transparent';
-                        vis[selectedrow[1]]=0;
+                    document.getElementById(selectedrow[1]).style.backgroundColor='transparent';
+                    vis[selectedrow[1]]=0;
                     }
                     else{
                         sameelemflag=0;
                     }
                     selectedrow.splice(1);
                     selectedrow.push(a1);
-                    tobeadded.push(mat[r][1])
+                    tobeadded.push(mat[r][1]);
                     if (tobeadded[0]===tobeadded[1])
                     {
                         sameelemflag=1;
@@ -328,6 +337,7 @@ function bitadd(a,b)
             }
         }
         signval = sign + signval;
+
         return signval;
     }
 
@@ -339,7 +349,7 @@ function bitadd(a,b)
         if(a[0] === b[0] && result[0] != a[0])
         {
             console.log("hi there i am here");
-            valcomplement1 = unsigned(str1) ;
+            valcomplement1 = unsigned(str1);
             valcomplement2 = valcomplement1;
         }
         else
@@ -376,15 +386,14 @@ function bitadd(a,b)
     function setgreencolor(idx,strin)
     {
         flag = 0;
-        for (var i=0;i<32;i++)
+        for (var i=0;i<16;i++)
         {
             if(mat[i][idx]===strin)
-             {
+             {	
                  var index = (100*(i+1)+idx);
                  coloredidx.push(index);
                  document.getElementById(index).style.backgroundColor='rgb(164, 198, 82)';
-          		 document.getElementById(index).style.color='white';
-
+                 document.getElementById(index).style.color='white';
                  flag = 1;
                  break;
              }
@@ -439,7 +448,6 @@ function bitadd(a,b)
         }
         valcomplement2 = "-" + unsigned(complement2);
     }
-    console.log("inside add part");
     document.getElementById('binar').innerHTML = str1;
     document.getElementById('2s').innerHTML = valcomplement2;
     document.getElementById('1s').innerHTML = valcomplement1;
@@ -451,4 +459,5 @@ function bitadd(a,b)
     addoverflow();
     let message = messages[1];
     document.getElementById("message").innerHTML = message;
+    
 }
