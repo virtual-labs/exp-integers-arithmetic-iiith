@@ -1,18 +1,18 @@
 [
-{"question":"This is a Sample Question 1?",
+{"question":"The final addition sum of the numbers, 0111 & 0110 is ?",
 "answers":{
-            "a":"answer1",
-            "b":"answer2",
-            "c":"answer3",
-            "d":"answer4"
+            "a":"1101",
+            "b":"1001",
+            "c":"1111",
+            "d":"1010"
           },
 "correctAnswer":"a"},
-{"question":"This is a Sample Question 2?",
+{"question":"Which of the following cases leads to the overflow condition in addition using 2’s complement?",
 "answers":{
-            "a":"answer1",
-            "b":"answer2",
-            "c":"answer3",
-            "d":"answer4"
+            "a":"Addition of two positive numbers, which results in sum ≥ 2^(n-1)",
+            "b":"Addition of two positive numbers, which results in sum < 2^(n–1)",
+            "c":"Addition of two negative numbers, |sum| ≤ 2^(n–1)",
+            "d":"Addition of two negative numbers, |sum| > 2^(n–1)"
           },
-"correctAnswer":"c"} 
+"correctAnswer":"a"} 
 ]
