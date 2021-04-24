@@ -1,250 +1,250 @@
 body {
-  font-family: "Open Sans", sans-serif;
-  line-height:normal;
+    font-family: "Open Sans", sans-serif;
+    line-height: normal;
 }
 
-
 table {
-border: 2px solid #ccc;
-border-collapse:collapse;
-margin: 0;
-padding: 0;
-width: 100%;
-border-width: medium;
-line-height:  210%;
-border-color:#673939;
-min-width: 150px;
+    border: 2px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border-width: medium;
+    line-height: 210%;
+    border-color: #673939;
+    min-width: 150px;
 }
 
 table tr {
-background-color: #f8f8f8;
-border: 2.5px solid #673939;
+    background-color: #f8f8f8;
+    border: 2.5px solid #673939;
 }
 
 table td {
-font-size: 85%;
-text-align: center;
-position: relative;
-border: 1.25px solid #673939;
+    font-size: 85%;
+    text-align: center;
+    position: relative;
+    border: 1.25px solid #673939;
 }
 
 table th {
-font-size: 85%;
-text-align: center;
-border: 2px solid #673939;
+    font-size: 85%;
+    text-align: center;
+    border: 2px solid #673939;
 }
 
 table.table.table-bordered {
-background-color: #ffffff;
-border-width:medium;
-border-color: #673939;
+    background-color: #ffffff;
+    border-width: medium;
+    border-color: #673939;
 }
+
 div.operations button {
-      font-family: monospace;
-      font-weight:bold;
-      width: 9rem;
-      text-align: left;
+    font-family: monospace;
+    font-weight: bold;
+    width: 9rem;
+    text-align: left;
 }
-.table-bordered thead th{
-  border-bottom-color: #673939;
-  border-bottom-width: 100%;
-}
-.table-bordered td{
-border: 2px solid #673939;}
 
-.rtable.table-bordered{
-border-width: medium;
-border-color:#673939;
+.table-bordered thead th {
+    border-bottom-color: #673939;
+    border-bottom-width: 100%;
 }
+
+.table-bordered td {
+    border: 2px solid #673939;
+}
+
+.rtable.table-bordered {
+    border-width: medium;
+    border-color: #673939;
+}
+
 #five-switch a {
-color: white;
-text-decoration: none;
-
+    color: white;
+    text-decoration: none;
 }
 
 #four-switch a {
-color: white;
-text-decoration: none;
+    color: white;
+    text-decoration: none;
 }
 
 #main-heading {
-align-content: center;
-text-align: center;
-font-weight: 600;
-font-size: 2.3vw;
-color: #363636;
+    align-content: center;
+    text-align: center;
+    font-weight: 600;
+    font-size: 2.3vw;
+    color: #363636;
 }
+
 #result-heading {
-font-weight: bold;
-font-size: 2vw;
-color: #363636;
-/* min-width: 280px; */
+    font-weight: bold;
+    font-size: 2vw;
+    color: #363636;
+    /* min-width: 280px; */
 }
+
 .message {
-text-align: center;
-background-color: rgb(164, 198, 82);
-font-family: Arial, Helvetica, sans-serif;
-font-size:1.5vw;
-color: white;
+    text-align: center;
+    background-color: rgb(164, 198, 82);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5vw;
+    color: white;
 }
 
-.br
-{
- display: block;
- margin-bottom: 2em;
+.br {
+    display: block;
+    margin-bottom: 2em;
 }
 
-.btn
-{
- border-radius: 16px;
- border: none;
- font-family: sans-serif;
- text-align:left;
- font-size:0.7vw;
- background-color:#288EC8;
- width:100px;
- color: white;
+.btn {
+    border-radius: 16px;
+    border: none;
+    font-family: sans-serif;
+    text-align: left;
+    font-size: 0.7vw;
+    background-color: #288EC8;
+    width: 100px;
+    color: white;
 }
-.btn:hover{
-  background-color: #A9A9A9;
+
+.btn:hover {
+    background-color: #A9A9A9;
 }
-#anku{
-font-size: 90%;
+
+#anku {
+    font-size: 90%;
 }
+
 @media screen and(max-width: 769px) {
-#main-heading{
-  padding-top: 10px;
-  text-align: center;
-  font-size: 5.4vw;
-}
-.message{
-    font-size: 4vw;
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-table th{
-  font-size: 75%;
-  text-align:center;
-  font-weight:600;
-}
-table td {
-  font-size: 75%;
-  text-align: center;
-}
-#anku{
-  font-size: 85%;
-}
-#result-heading{
-  font-size: 5vw;
-  font-weight: bold;
-}
-.btn{
-    font-size:60%;
-    width:44%;
-  }
-
-}
- #result{
-  min-width: 100px;
-}
-@media screen and (max-width: 1570px)
-{
-  .message{
-    font-size: 2vh;
-    margin-left: 10px;
-    margin-right: 10px;
-
-  }
-  #main-heading{
-    padding-top: 10px;
-    font-size: 3vh;
-  }
-  #result-heading{
-    font-size: 3vh;
-  }
-  .btn{
-    font-size:70%;
-  }
-}
-@media screen and (max-width: 768px)
-{
-  .message{
-    font-size: 2vh;
-    margin-left: 10px;
-    margin-right: 10px;
-
-  }
-  #main-heading{
-    padding-top: 10px;
-    font-size: 3vh;
-  }
-  #result-heading{
-    font-size: 6vw;
-  }
-  .btn{
-    font-size:70%;
-  }
+    #main-heading {
+        padding-top: 10px;
+        text-align: center;
+        font-size: 5.4vw;
+    }
+    .message {
+        font-size: 4vw;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    table th {
+        font-size: 75%;
+        text-align: center;
+        font-weight: 600;
+    }
+    table td {
+        font-size: 75%;
+        text-align: center;
+    }
+    #anku {
+        font-size: 85%;
+    }
+    #result-heading {
+        font-size: 5vw;
+        font-weight: bold;
+    }
+    .btn {
+        font-size: 60%;
+        width: 44%;
+    }
 }
 
-@media screen and (max-width: 380px){
-  .message{
-    font-size: 5vw;
-    margin-left: 10px;
-    margin-right: 10px;
-
-  }
-  table{
-    line-height: 100%;
+#result {
     min-width: 100px;
-    border: 1px solid #ccc;
-  }
-  table th{
-    font-size: 2.5vw;
-    text-align:center;
-    font-weight:600;
-  }
-  table td {
-    font-size: 2.5vw;
-    text-align: center;
-  }
-  #main-heading{
-    padding-top: 10px;
-    font-size: 6vw;
-  }
-  #anku{
-    font-size: 70%;
-    
-  }
-  .btn
-  {
-    font-size:3vw;
-    width: 30%;
-  }
-  .br
-  {
-  display: block;
-  margin-bottom: 1em;
-  }
 }
-@media screen and (max-width: 200px)
-{
-  .message{
-    font-size: 1.3vh;
-  }
-  table{
-    line-height:150%;
-  }
-  table td {
-    font-size: 1vh;
-    text-align: center;
-  }
-   table th{
-    font-size: 0.4vh;
-    text-align:center;
-    font-weight:600;
-  }
-  .btn{
-    width: 100%;
-    font-size: 1vh;
-  }
+
+@media screen and (max-width: 1570px) {
+    .message {
+        font-size: 2vh;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    #main-heading {
+        padding-top: 10px;
+        font-size: 3vh;
+    }
+    #result-heading {
+        font-size: 3vh;
+    }
+    .btn {
+        font-size: 70%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .message {
+        font-size: 2vh;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    #main-heading {
+        padding-top: 10px;
+        font-size: 3vh;
+    }
+    #result-heading {
+        font-size: 6vw;
+    }
+    .btn {
+        font-size: 70%;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .message {
+        font-size: 5vw;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    table {
+        line-height: 100%;
+        min-width: 100px;
+        border: 1px solid #ccc;
+    }
+    table th {
+        font-size: 2.5vw;
+        text-align: center;
+        font-weight: 600;
+    }
+    table td {
+        font-size: 2.5vw;
+        text-align: center;
+    }
+    #main-heading {
+        padding-top: 10px;
+        font-size: 6vw;
+    }
+    #anku {
+        font-size: 70%;
+    }
+    .btn {
+        font-size: 3vw;
+        width: 30%;
+    }
+    .br {
+        display: block;
+        margin-bottom: 1em;
+    }
+}
+
+@media screen and (max-width: 200px) {
+    .message {
+        font-size: 1.3vh;
+    }
+    table {
+        line-height: 150%;
+    }
+    table td {
+        font-size: 1vh;
+        text-align: center;
+    }
+    table th {
+        font-size: 0.4vh;
+        text-align: center;
+        font-weight: 600;
+    }
+    .btn {
+        width: 100%;
+        font-size: 1vh;
+    }
 }
