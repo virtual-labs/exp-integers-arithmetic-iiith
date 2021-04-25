@@ -172,24 +172,6 @@ div.operations button {
     }
 }
 
-@media screen and (max-width: 768px) {
-    .message {
-        font-size: 2vh;
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-    #main-heading {
-        padding-top: 10px;
-        font-size: 3vh;
-    }
-    #result-heading {
-        font-size: 6vw;
-    }
-    .btn {
-        font-size: 70%;
-    }
-}
-
 @media screen and (max-width: 380px) {
     .message {
         font-size: 5vw;
