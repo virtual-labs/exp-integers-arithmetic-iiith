@@ -46,16 +46,16 @@ function addOverflow() {
             newcell.style.backgroundColor = "rgb(164, 198, 82)";
             newcell.style.fontWeight = 'bold';
         }
-        VisitedArray[i] = 1;
+        visitedArray[i] = 1;
     }
 
 }
 
 function deleteRow() {
     for (let i = 0; i < 5; i++) {
-        if (VisitedArray[i] === 1) {
+        if (visitedArray[i] === 1) {
             document.getElementById(resultArrayName[i]).deleteCell(-1);
-            VisitedArray[i] = 0;
+            visitedArray[i] = 0;
         }
     }
 
