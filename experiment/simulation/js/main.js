@@ -81,10 +81,12 @@ function reset() {
     glob = 0;
     for (let i = 0; i < selectedRow.length; i++) {
         document.getElementById(selectedRow[i]).style.backgroundColor = 'transparent';
+        document.getElementsByClassName(coloredIdx[i])[0].style.color = 'black';
 
     }
     for (let i = 0; i < coloredIdx.length; i++) {
         document.getElementsByClassName(coloredIdx[i])[0].style.backgroundColor = 'transparent';
+        document.getElementsByClassName(coloredIdx[i])[0].style.color = 'black';
     }
     selectedRow = [];
     coloredIdx = [];
