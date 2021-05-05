@@ -27,7 +27,7 @@
                     <span class="br"></span>
                     <button onclick="addFunction()" class="btn">Add</button>
                     <span class="br"></span>
-                    <button onclick="reset()" class="btn">RESET</button>
+                    <button id="four-reset" onclick="reset(event)" class="btn">RESET</button>
                     <span class="br"></span>
                     <button class="btn" id="five-switch"><a href="html/CO1_5-bit.html">5-bit Table</a></button>
                     <span class="br"></span>
@@ -83,7 +83,7 @@
                         </thead>
 
                         <tbody>
-                            <tr id="1" onclick="rowSelection(event)" onmouseover="mouseOver(event)" onmouseout="mouseOut(event)">
+                            <tr id="1" onclick="rowSelection(event,'1')" onmouseover="mouseOver(event)" onmouseout="mouseOut(event)">
                                 <td id="1">1</td>
                                 <td id="1" class="101">0000</td>
                                 <td id="1" class="102">0</td>
@@ -91,7 +91,7 @@
                                 <td id="1" class="104">0</td>
                                 <td id="1" class="105">0</td>
                             </tr>
-                            <tr id="2" onclick="rowSelection(event)" onmouseover="mouseOver(event)" onmouseout="mouseOut(event)">
+                            <tr id="2" onclick="rowSelection(event,'1')" onmouseover="mouseOver(event)" onmouseout="mouseOut(event)">
                                 <td id="2">2</td>
                                 <td id="2" class="201">0001</td>
                                 <td id="2" class="202">1</td>
@@ -99,7 +99,7 @@
                                 <td id="2" class="204">1</td>
                                 <td id="2" class="205">1</td>
                             </tr>
-                            <tr id="3" onclick="rowSelection(event)" onmouseover="mouseOver(event)" onmouseout="mouseOut(event)">
+                            <tr id="3" onclick="rowSelection(event,'1')" onmouseover="mouseOver(event)" onmouseout="mouseOut(event)">
                                 <td id="3">3</td>
                                 <td id="3" class="301">0010</td>
                                 <td id="3" class="302">2</td>
@@ -107,7 +107,7 @@
                                 <td id="3" class="304">2</td>
                                 <td id="3" class="305">2</td>
                             </tr>
-                            <tr id="4" onclick="rowSelection(event)" onmouseover="mouseOver(event)" onmouseout="mouseOut(event)">
+                            <tr id="4" onclick="rowSelection(event,'1')" onmouseover="mouseOver(event)" onmouseout="mouseOut(event)">
                                 <td id="4">4</td>
                                 <td id="4" class="401">0011</td>
                                 <td id="4" class="402">3</td>
@@ -115,7 +115,7 @@
                                 <td id="4" class="404">3</td>
                                 <td id="4" class="405">3</td>
                             </tr>
-                            <tr id="5" onclick="rowSelection(event)" onmouseover="mouseOver(event)" onmouseout="mouseOut(event)">
+                            <tr id="5" onclick="rowSelection(event,'1')" onmouseover="mouseOver(event)" onmouseout="mouseOut(event)">
                                 <td id="5">5</td>
                                 <td id="5" class="501">0100</td>
                                 <td id="5" class="502">4</td>
@@ -123,7 +123,7 @@
                                 <td id="5" class="504">4</td>
                                 <td id="5" class="505">4</td>
                             </tr>
-                            <tr id="6" onclick="rowSelection(event)" onmouseover="mouseOver(event)" onmouseout="mouseOut(event)">
+                            <tr id="6" onclick="rowSelection(event,'1')" onmouseover="mouseOver(event)" onmouseout="mouseOut(event)">
                                 <td id="6">6</td>
                                 <td id="6" class="601">0101</td>
                                 <td id="6" class="602">5</td>
@@ -131,7 +131,7 @@
                                 <td id="6" class="604">5</td>
                                 <td id="6" class="605">5</td>
                             </tr>
-                            <tr id="7" onclick="rowSelection(event)" onmouseover="mouseOver(event)" onmouseout="mouseOut(event)">
+                            <tr id="7" onclick="rowSelection(event,'1')" onmouseover="mouseOver(event)" onmouseout="mouseOut(event)">
                                 <td id="7">7</td>
                                 <td id="7" class="701">0110</td>
                                 <td id="7" class="702">6</td>
@@ -139,7 +139,7 @@
                                 <td id="7" class="704">6</td>
                                 <td id="7" class="705">6</td>
                             </tr>
-                            <tr id="8" onclick="rowSelection(event)" onmouseover="mouseOver(event)" onmouseout="mouseOut(event)">
+                            <tr id="8" onclick="rowSelection(event,'1')" onmouseover="mouseOver(event)" onmouseout="mouseOut(event)">
                                 <td id="8">8</td>
                                 <td id="8" class="801">0111</td>
                                 <td id="8" class="802">7</td>
@@ -147,7 +147,7 @@
                                 <td id="8" class="804">7</td>
                                 <td id="8" class="805">7</td>
                             </tr>
-                            <tr id="9" onclick="rowSelection(event)" onmouseover="mouseOver(event)" onmouseout="mouseOut(event)">
+                            <tr id="9" onclick="rowSelection(event,'1')" onmouseover="mouseOver(event)" onmouseout="mouseOut(event)">
                                 <td id="9">9</td>
                                 <td id="9" class="901">1000</td>
                                 <td id="9" class="902">-8</td>
@@ -155,7 +155,7 @@
                                 <td id="9" class="904">8</td>
                                 <td id="9" class="905">-0</td>
                             </tr>
-                            <tr id="10" onclick="rowSelection(event)" onmouseover="mouseOver(event)" onmouseout="mouseOut(event)">
+                            <tr id="10" onclick="rowSelection(event,'1')" onmouseover="mouseOver(event)" onmouseout="mouseOut(event)">
                                 <td id="10">10</td>
                                 <td id="10" class="1001">1001</td>
                                 <td id="10" class="1002">-7</td>
@@ -163,7 +163,7 @@
                                 <td id="10" class="1004">9</td>
                                 <td id="10" class="1005">-1</td>
                             </tr>
-                            <tr id="11" onclick="rowSelection(event)" onmouseover="mouseOver(event)" onmouseout="mouseOut(event)">
+                            <tr id="11" onclick="rowSelection(event,'1')" onmouseover="mouseOver(event)" onmouseout="mouseOut(event)">
                                 <td id="11">11</td>
                                 <td id="11" class="1101">1010</td>
                                 <td id="11" class="1102">-6</td>
@@ -171,7 +171,7 @@
                                 <td id="11" class="1104">10</td>
                                 <td id="11" class="1105">-2</td>
                             </tr>
-                            <tr id="12" onclick="rowSelection(event)" onmouseover="mouseOver(event)" onmouseout="mouseOut(event)">
+                            <tr id="22" onclick="rowSelection(event,'1')" onmouseover="mouseOver(event)" onmouseout="mouseOut(event)">
                                 <td id="12">12</td>
                                 <td id="12" class="1201">1011</td>
                                 <td id="12" class="1202">-5</td>
@@ -179,7 +179,7 @@
                                 <td id="12" class="1204">11</td>
                                 <td id="12" class="1205">-3</td>
                             </tr>
-                            <tr id="13" onclick="rowSelection(event)" onmouseover="mouseOver(event)" onmouseout="mouseOut(event)">
+                            <tr id="13" onclick="rowSelection(event,'1')" onmouseover="mouseOver(event)" onmouseout="mouseOut(event)">
                                 <td id="13">13</td>
                                 <td id="13" class="1301">1100</td>
                                 <td id="13" class="1302">-5</td>
@@ -187,7 +187,7 @@
                                 <td id="13" class="1304">12</td>
                                 <td id="13" class="1305">-4</td>
                             </tr>
-                            <tr id="14" onclick="rowSelection(event)" onmouseover="mouseOver(event)" onmouseout="mouseOut(event)">
+                            <tr id="14" onclick="rowSelection(event,'1')" onmouseover="mouseOver(event)" onmouseout="mouseOut(event)">
                                 <td id="14">14</td>
                                 <td id="14" class="1401">1101</td>
                                 <td id="14" class="1402">-6</td>
@@ -195,7 +195,7 @@
                                 <td id="14" class="1404">13</td>
                                 <td id="14" class="1405">-5</td>
                             </tr>
-                            <tr id="15" onclick="rowSelection(event)" onmouseover="mouseOver(event)" onmouseout="mouseOut(event)">
+                            <tr id="15" onclick="rowSelection(event,'1')" onmouseover="mouseOver(event)" onmouseout="mouseOut(event)">
                                 <td id="15">15</td>
                                 <td id="15" class="1501">1110</td>
                                 <td id="15" class="1502">-7</td>
@@ -203,7 +203,7 @@
                                 <td id="15" class="1504">14</td>
                                 <td id="15" class="1505">-6</td>
                             </tr>
-                            <tr id="16" onclick="rowSelection(event)" onmouseover="mouseOver(event)" onmouseout="mouseOut(event)">
+                            <tr id="16" onclick="rowSelection(event,'1')" onmouseover="mouseOver(event)" onmouseout="mouseOut(event)">
                                 <td id="16">16</td>
                                 <td id="16" class="1601">1111</td>
                                 <td id="16" class="1602">-8</td>
