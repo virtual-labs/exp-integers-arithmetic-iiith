@@ -65,9 +65,9 @@ function mouseOut(event) {
 
 function reset(event) {
     let flg = event.target.id;
-    if (flg == "four-reset")
+    if (flg === "four-reset")
         vis = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-    if (flg == "five-reset") {
+    if (flg === "five-reset") {
         flg2 = 2
         vis = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     }
@@ -79,7 +79,7 @@ function reset(event) {
     document.getElementById('1s').innerHTML = '';
     document.getElementById('unsigned').innerHTML = '';
     document.getElementById('signed').innerHTML = '';
-    if (glob != 0 || afterAdd === 1) {
+    if (glob !== 0 || afterAdd === 1) {
         afterAdd = 0;
     }
     glob = 0;
@@ -130,9 +130,9 @@ function rowSelection(event, flg) {
         document.getElementById('1s').innerHTML = '';
         document.getElementById('unsigned').innerHTML = '';
         document.getElementById('signed').innerHTML = '';
-        if (flg == '1')
+        if (flg === 1)
             vis = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-        if (flg == '2') {
+        if (flg === 2) {
             flg2 = flg
             vis = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
         }
@@ -153,9 +153,9 @@ function rowSelection(event, flg) {
         resultArray = [0, 0, 0, 0, 0];
     }
     let table = ""
-    if (flg == '1')
+    if (flg === 1)
         table = document.getElementById("four-bit-table");
-    if (flg == '2')
+    if (flg === 2)
         table = document.getElementById("five-bit-table");
     for (let r = 1, n = table.rows.length; r < n; r++) {
         temp = [];
@@ -163,7 +163,6 @@ function rowSelection(event, flg) {
             temp.push(table.rows[r].cells[c].innerHTML);
         }
         mat.push(temp);
-
     }
     for (let r = 0; r < table.rows.length - 1; r++) {
         if (mat[r][0] === rowNum) {
@@ -198,11 +197,8 @@ function rowSelection(event, flg) {
                 }
                 document.getElementById(rowNum).style.backgroundColor = '#5da0d1';
                 vis[rowNum] = 1;
-
             }
-
         }
-
     }
 }
 let carry = 0;
@@ -231,7 +227,6 @@ function bitAdd(a, b) {
                 c.push('0');
             }
         }
-
     }
     if (carry === '1') {
         c.push('1');
@@ -244,31 +239,31 @@ function bitAdd(a, b) {
     document.getElementById('unsigned').innerHTML = unsigned(str1);
 
     function unsigned(result) {
-        let unsignValueue = 0;
+        let unsignValue = 0;
         if (result[result.length - 1] === '1') {
-            unsignValueue = 1;
+            unsignValue = 1;
         }
         for (let i = result.length - 2; i >= 0; i--) {
             if (result[i] === '1') {
-                unsignValueue += Math.pow(2, result.length - 1 - i);
+                unsignValue += Math.pow(2, result.length - 1 - i);
             }
         }
-        return unsignValueue;
+        return unsignValue;
     }
     document.getElementById('signed').innerHTML = signed(str1);
 
     function signed(result) {
-        let signValueue = 0;
+        let signValue = 0;
         let sign = "";
-        if (a[0] === b[0] && result[0] != a[0]) {
-            signValueue = unsigned(str1);
+        if (a[0] === b[0] && result[0] !== a[0]) {
+            signValue = unsigned(str1);
         } else {
             if (result[result.length - 1] === '1') {
-                signValueue = 1;
+                signValue = 1;
             }
             for (let i = result.length - 2; i >= 0; i--) {
-                if (result[i] === '1' && i != 0) {
-                    signValueue += Math.pow(2, result.length - 1 - i);
+                if (result[i] === '1' && i !== 0) {
+                    signValue += Math.pow(2, result.length - 1 - i);
                 }
                 if (i === 0) {
                     if (result[i] === '1') {
@@ -276,20 +271,19 @@ function bitAdd(a, b) {
                     }
                 }
             }
-            if (signValueue === 0) {
+            if (signValue === 0) {
                 sign = "";
             }
         }
-        signValueue = sign + signValueue;
-
-        return signValueue;
+        signValue = sign + signValue;
+        return signValue;
     }
     onesComplement(str1);
 
     function onesComplement(result) {
         let complement1 = "";
         valComplement1 = 0;
-        if (a[0] === b[0] && result[0] != a[0]) {
+        if (a[0] === b[0] && result[0] !== a[0]) {
             console.debug("hi there i am here");
             valComplement1 = unsigned(str1);
             valComplement2 = valComplement1;
@@ -318,7 +312,7 @@ function bitAdd(a, b) {
     function setGreenColor(a, idx, strin) {
         let flag = 0;
         let length = 16
-        if (a == 2)
+        if (a === 2)
             length = 32
         for (let i = 0; i < length; i++) {
             if (mat[i][idx] === strin) {
@@ -333,7 +327,6 @@ function bitAdd(a, b) {
         }
         return flag;
     }
-
 
     function twosComplement(result) {
         let complement = [];
@@ -381,5 +374,4 @@ function bitAdd(a, b) {
     addOverflow();
     let message = messages[1];
     document.getElementById("message").innerHTML = message;
-
 }
