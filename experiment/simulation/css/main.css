@@ -72,6 +72,7 @@ div.operations button {
 
 #main-heading {
     align-content: center;
+    margin-left: 35%;
     text-align: center;
     font-weight: 600;
     font-size: 2.3vw;
@@ -102,7 +103,7 @@ div.operations button {
     border-radius: 16px;
     border: none;
     font-family: sans-serif;
-    text-align: left;
+    text-align: center;
     font-size: 0.7vw;
     background-color: #288EC8;
     width: 100px;
@@ -115,6 +116,24 @@ div.operations button {
 
 #anku {
     font-size: 90%;
+}
+
+@media screen and (max-width: 1570px) {
+    .message {
+        font-size: 2vh;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    #main-heading {
+        padding-top: 10px;
+        font-size: 3vh;
+    }
+    #result-heading {
+        font-size: 3vh;
+    }
+    .btn {
+        font-size: 70%;
+    }
 }
 
 @media screen and(max-width: 769px) {
@@ -145,31 +164,18 @@ div.operations button {
         font-weight: bold;
     }
     .btn {
-        font-size: 60%;
-        width: 44%;
+        font-size: 65%;
+        width: 34%;
+        margin-left: 50%;
+    }
+    .br {
+        display: block;
+        margin-bottom: 1em;
     }
 }
 
 #result {
     min-width: 100px;
-}
-
-@media screen and (max-width: 1570px) {
-    .message {
-        font-size: 2.8vh;
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-    #main-heading {
-        padding-top: 10px;
-        font-size: 3vh;
-    }
-    #result-heading {
-        font-size: 3vh;
-    }
-    .btn {
-        font-size: 70%;
-    }
 }
 
 @media screen and (max-width: 380px) {
@@ -200,8 +206,9 @@ div.operations button {
         font-size: 70%;
     }
     .btn {
-        font-size: 3.5vw;
+        font-size: 3.2vw;
         width: 30%;
+        margin-left: 40%;
     }
     .br {
         display: block;
@@ -225,11 +232,8 @@ div.operations button {
         text-align: center;
         font-weight: 600;
     }
-    .rtable th {
-        font-size: 4vw;
-    }
     .btn {
-        width: 60%;
-        font-size: 1vh;
+        width: 100%;
+        font-size: 1.3vh;
     }
 }
