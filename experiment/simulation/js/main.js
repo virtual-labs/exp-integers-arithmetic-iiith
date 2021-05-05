@@ -9,13 +9,13 @@ let temp = [];
 let toBeAdded = [];
 let selectedRow = [];
 let coloredIdx = [];
+let flg2 = 1
 let resultArray = [0, 0, 0, 0, 0];
 let visitedArray = [0, 0, 0, 0, 0];
 let resultArrayName = ['rowbinar', 'row2s', 'row1s', 'rowunsigned', 'rowsigned'];
 let vis = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 let sameElemFlag = 0;
 let glob = 0;
-let flag = 0;
 let afterAdd = 0;
 let valComplement2 = 0;
 let valComplement1 = 0;
@@ -38,7 +38,6 @@ function addOverflow() {
         }
         visitedArray[i] = 1;
     }
-
 }
 
 function deleteRow() {
@@ -48,7 +47,6 @@ function deleteRow() {
             visitedArray[i] = 0;
         }
     }
-
 }
 
 function mouseOver(event) {
@@ -65,8 +63,14 @@ function mouseOut(event) {
     }
 }
 
-function reset() {
-    vis = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+function reset(event) {
+    let flg = event.target.id;
+    if (flg == "four-reset")
+        vis = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    if (flg == "five-reset") {
+        flg2 = 2
+        vis = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    }
     mat = [];
     temp = [];
     toBeAdded = [];
@@ -94,7 +98,6 @@ function reset() {
     resultArray = [0, 0, 0, 0, 0];
     let message = messages[0];
     document.getElementById("message").innerHTML = message;
-
 }
 
 function addFunction() {
@@ -118,7 +121,7 @@ function addFunction() {
     }
 }
 
-function rowSelection(event) {
+function rowSelection(event, flg) {
     let rowNum = event.target.id
     console.debug(" rowNum ", rowNum)
     if (glob === 0) {
@@ -127,7 +130,12 @@ function rowSelection(event) {
         document.getElementById('1s').innerHTML = '';
         document.getElementById('unsigned').innerHTML = '';
         document.getElementById('signed').innerHTML = '';
-        vis = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+        if (flg == '1')
+            vis = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+        if (flg == '2') {
+            flg2 = flg
+            vis = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+        }
         for (let i = 0; i < selectedRow.length; i++) {
             document.getElementById(selectedRow[i]).style.backgroundColor = 'transparent';
             document.getElementById(selectedRow[i]).style.color = 'black';
@@ -144,8 +152,11 @@ function rowSelection(event) {
         deleteRow();
         resultArray = [0, 0, 0, 0, 0];
     }
-
-    let table = document.getElementById("four-bit-table");
+    let table = ""
+    if (flg == '1')
+        table = document.getElementById("four-bit-table");
+    if (flg == '2')
+        table = document.getElementById("five-bit-table");
     for (let r = 1, n = table.rows.length; r < n; r++) {
         temp = [];
         for (let c = 0, m = table.rows[r].cells.length; c < m; c++) {
@@ -302,12 +313,14 @@ function bitAdd(a, b) {
                 twosComplement(complement1);
             }
         }
-
     }
 
-    function setGreenColor(idx, strin) {
+    function setGreenColor(a, idx, strin) {
         let flag = 0;
-        for (let i = 0; i < 16; i++) {
+        let length = 16
+        if (a == 2)
+            length = 32
+        for (let i = 0; i < length; i++) {
             if (mat[i][idx] === strin) {
                 let index = (100 * (i + 1) + idx);
                 console.debug("green ", index)
@@ -360,11 +373,11 @@ function bitAdd(a, b) {
     document.getElementById('binar').innerHTML = str1;
     document.getElementById('2s').innerHTML = valComplement2;
     document.getElementById('1s').innerHTML = valComplement1;
-    resultArray[0] = setGreenColor(1, document.getElementById('binar').innerHTML);
-    resultArray[1] = setGreenColor(2, document.getElementById('2s').innerHTML);
-    resultArray[2] = setGreenColor(3, document.getElementById('1s').innerHTML);
-    resultArray[3] = setGreenColor(4, document.getElementById('unsigned').innerHTML);
-    resultArray[4] = setGreenColor(5, document.getElementById('signed').innerHTML);
+    resultArray[0] = setGreenColor(flg2, 1, document.getElementById('binar').innerHTML);
+    resultArray[1] = setGreenColor(flg2, 2, document.getElementById('2s').innerHTML);
+    resultArray[2] = setGreenColor(flg2, 3, document.getElementById('1s').innerHTML);
+    resultArray[3] = setGreenColor(flg2, 4, document.getElementById('unsigned').innerHTML);
+    resultArray[4] = setGreenColor(flg2, 5, document.getElementById('signed').innerHTML);
     addOverflow();
     let message = messages[1];
     document.getElementById("message").innerHTML = message;
