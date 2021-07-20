@@ -1,19 +1,22 @@
-[
-{"question":"Sign magnitude is a very simple representation of ?",
-"answers":{
-            "a":"Positive number",
-            "b":"Infinity",
-            "c":"Zero",
-            "d":"Negative numbers"
-          },
-"correctAnswer":"d"},
+[{
+        "question": "1. Sign magnitude is a very simple representation of ?",
+        "answers": {
+            "a": "Positive number",
+            "b": "Infinity",
+            "c": "Zero",
+            "d": "Negative number"
+        },
+        "correctAnswer": "d"
+    },
 
-{"question":"Which method of representation has two representations for ‘0’ ?",
-"answers":{
-            "a":"Sign-magnitude",
-            "b":"1’s compliment",
-            "c":"2's complement form",
-            "d":"None of the above"
-          },
-"correctAnswer":"a"} 
+    {
+        "question": "2. Which method of representation has two representations for ‘0’ ?",
+        "answers": {
+            "a": "Sign-magnitude",
+            "b": "1’s compliment",
+            "c": "2's complement form",
+            "d": "None of the above"
+        },
+        "correctAnswer": "a"
+    }
 ]
