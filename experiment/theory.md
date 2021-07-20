@@ -1,1 +1,1 @@
-Please read the [Lecture Notes at this link](docs/integerRepresentation.pdf) for the necessary background theory to work on this experiment.	
+- Please read the [Lecture Notes at this link](docs/integerRepresentation.pdf) for the necessary background theory to work on this experiment.	

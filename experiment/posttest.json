@@ -1,5 +1,5 @@
 [
-{"question":"The final addition sum of the numbers, 0111 & 0110 is ?",
+{"question":"1. The final addition sum of the numbers, 0111 & 0110 is ?",
 "answers":{
             "a":"1101",
             "b":"1001",
@@ -7,7 +7,8 @@
             "d":"1010"
           },
 "correctAnswer":"a"},
-{"question":"Which of the following cases leads to the overflow condition in addition using 2’s complement?",
+
+{"question":"2. Which of the following cases leads to the overflow condition in addition using 2’s complement?",
 "answers":{
             "a":"Addition of two positive numbers, which results in sum ≥ 2^(n-1)",
             "b":"Addition of two positive numbers, which results in sum < 2^(n–1)",
