@@ -1,0 +1,1 @@
+The objective of this experiment is to learn about the representation of signed and unsigned integers. Specifically, you will learn the advantages of using 2's complement representation of numbers for performing arithmetic over other representations.
