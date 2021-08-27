@@ -16,7 +16,7 @@
     {
       "target": "objective.html",
       "source": "objective.md",
-      "label": "Objectivex",
+      "label": "Objective",
       "unit-type": "task",
       "content-type": "text"
     },
