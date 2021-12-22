@@ -1,6 +1,6 @@
 This application is basically designed to make the user understand the difference and similarities between the different arithmetic representations of integers. The key idea is to be able to observe and understand that some of the arithmetic representations behave isomorphically and hence any of them could be interchangeably used at the backend without the knowledge of the user.
 
-## How to use the Application
+#### How to use the Application
 
 **Step-1:** Select any two rows that you want to add and press the ADD button.
 
