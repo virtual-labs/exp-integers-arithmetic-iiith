@@ -1,0 +1,10 @@
+
+/home/runner/work/exp-integers-arithmetic-iiith/exp-integers-arithmetic-iiith/experiment/simulation/js/main.js
+   52:10  warning  'mouseOver' is defined but never used     no-unused-vars
+   59:10  warning  'mouseOut' is defined but never used      no-unused-vars
+   66:10  warning  'reset' is defined but never used         no-unused-vars
+  103:10  warning  'addFunction' is defined but never used   no-unused-vars
+  124:10  warning  'rowSelection' is defined but never used  no-unused-vars
+
+✖ 5 problems (0 errors, 5 warnings)
+
